@@ -1,6 +1,6 @@
 // Function to handle button clicks and send button identifier to the server
 function handleClick(buttonId) {
-    fetch(`http://localhost:8000/handleClick?buttonId=${encodeURIComponent(buttonId)}`)
+    fetch(`https://track-mate.vercel.app/handleClick?buttonId=${encodeURIComponent(buttonId)}`)
         .then(response => response.json())
         .then(data => displayData(data))
         .catch(error => console.error("Error occurred:", error));
