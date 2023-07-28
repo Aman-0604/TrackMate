@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "TrackMate",
+    "description": "Track Progress of your mates on coding platforms like CodeChef, Leetcode and GeeksForGeeks.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "route.html",
+        "default_icon": "trackmate.png"
+    }
+}
