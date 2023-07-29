@@ -11,11 +11,11 @@ async function createGraph(index, data, key, buttonID) {
     var yValues = [];
     var barColors = ["red", "green", "blue", "orange", "brown"];
 
-    console.log(id, key);
+    // console.log("id", key);
 
     // values for x-axis
     for (let i = 0; i < data.length ; i++) {
-        xValues.push(data[i].id);
+        xValues.push(data[i]["id"]);
     }
 
     // values for y-axis
