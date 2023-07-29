@@ -87,16 +87,13 @@ async function gfg_webscrapper() {
             const page = response.data;
             const $ = cheerio.load(page);
 
-            const scoreCard = {
-                codingScore: 0,
-                problemsSolved: 0,
-                monthlyScore: 0,
-                articlesPublished: 0
-            }
             const userObj = {
                 gfg_id: current_user,
                 rank: 0,
-                scoreCard: scoreCard
+                codingScore: 0, 
+                problemsSolved: 0, 
+                monthlyScore: 0,
+                articlesPublished: 0
             }
 
             $('.rankNum', page).each(function () { userObj["rank"] = $(this).text(); })
@@ -105,10 +102,10 @@ async function gfg_webscrapper() {
                 detailsFetched.push(title);
             })
 
-            scoreCard['codingScore'] = detailsFetched[0];
-            scoreCard['problemsSolved'] = detailsFetched[1];
-            scoreCard['monthlyScore'] = detailsFetched[2];
-            scoreCard['articlesPublished'] = detailsFetched[3];
+            userObj["codingScore"] = detailsFetched[0];
+            userObj["problemsSolved"] = detailsFetched[1];
+            userObj["monthlyScore"] = detailsFetched[2];
+            userObj[articlesPublised] = detailsFetched[3];
 
             dataArr.push(userObj);
             // console.log(userObj);
