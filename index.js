@@ -105,7 +105,7 @@ async function gfg_webscrapper() {
             userObj["codingScore"] = detailsFetched[0];
             userObj["problemsSolved"] = detailsFetched[1];
             userObj["monthlyScore"] = detailsFetched[2];
-            userObj[articlesPublised] = detailsFetched[3];
+            userObj["articlesPublised"] = detailsFetched[3];
 
             dataArr.push(userObj);
             // console.log(userObj);
