@@ -29,7 +29,7 @@ async function leetcode_webscrapper() {
             })
 
             const userObj = {
-                lc_id: current_user,
+                id: current_user,
                 total: 0,
                 rank: detailsFetched[1].slice(4),
                 easy: detailsFetched[2].split("/")[0].slice(4),
@@ -56,7 +56,7 @@ async function codechef_webscrapper() {
             const $ = cheerio.load(page);
 
             let userObj = {
-                cc_id: current_user,
+                id: current_user,
                 rank: 0,
                 contest: 0
             }
@@ -88,10 +88,10 @@ async function gfg_webscrapper() {
             const $ = cheerio.load(page);
 
             const userObj = {
-                gfg_id: current_user,
+                id: current_user,
                 rank: 0,
-                codingScore: 0, 
-                problemsSolved: 0, 
+                codingScore: 0,
+                problemsSolved: 0,
                 monthlyScore: 0,
                 articlesPublished: 0
             }
